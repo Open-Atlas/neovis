@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <title>DataViz</title>
+    <style type="text/css">
+      #viz {
+        width: 900px;
+        height: 700px;
+      }
+    </style>
+    <script src="https://cdn.neo4jlabs.com/neovis.js/v1.5.0/neovis.js"></script>
+  </head>
+  <script>
+    function draw() {
+      var config = {
+        encrypted: 'ENCRYPTION_ON',
+        trust: 'TRUST_SYSTEM_CA_SIGNED_CERTIFICATES',
+        container_id: 'viz',
+        server_url: 'neo4j://a50e1e1d.databases.neo4j.io',
+        server_user: 'neo4j',
+        server_password: 'Iy9z-hV1-vCrYOfUWHGfaSi2tVY_St9FabjbKtx-z0E',
+        labels: {
+          // FIXME: find a way to input defaults, right now you need to map every single label manually.
+          // here's a discussion for defaults and the use of the alpha build
+          // https://github.com/neo4j-contrib/neovis.js/issues/216
+          Person: {
+            caption: 'name',
+          },
+          Articles: {
+            caption: 'name',
+          },
+          Book: {
+            caption: 'name',
+          },
+        },
+        relationships: {
+          'AUTHOR OF': {
+            caption: true,
+          },
+        },
+        initial_cypher: `MATCH (n)-[r]->(m) MATCH (x) RETURN x,n,r,m`,
+      };
+
+      var viz = new NeoVis.default(config);
+      viz.render();
+    }
+  </script>
+  <body onload="draw()">
+    <div id="viz"></div>
+  </body>
+</html>
