@@ -8,7 +8,7 @@ Remember to remove the `+s` from your server_url!
 
 Map your `labels` and `relationships` to your preference, [see the original repository for the full documentation](https://github.com/neo4j-contrib/neovis.js).
 
-Thanks to [@rthennan](https://github.com/rthennan) for answering in the [neovis issue](https://github.com/neo4j-contrib/neovis.js/issues/227#issuecomment-1088470967)
+Thanks to [@rthennan](https://github.com/rthennan) for answering in the [neovis issue](https://github.com/neo4j-contrib/neovis.js/issues/227#issuecomment-1088470967).
 
 
 ![](example-viz.png)
