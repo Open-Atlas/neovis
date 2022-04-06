@@ -11,17 +11,16 @@
   </head>
   <script>
     function draw() {
+      // ISSUE: #2 DB credentials are visible to the front-end
       var config = {
         encrypted: 'ENCRYPTION_ON',
         trust: 'TRUST_SYSTEM_CA_SIGNED_CERTIFICATES',
         container_id: 'viz',
-        server_url: 'neo4j://a50e1e1d.databases.neo4j.io',
+        server_url: 'neo4j://a50e1e1d.databases.neo4j.io', //using non encrypted connection, idk that's just how it works with Neo4J Aura
         server_user: 'neo4j',
         server_password: 'Iy9z-hV1-vCrYOfUWHGfaSi2tVY_St9FabjbKtx-z0E',
         labels: {
-          // FIXME: find a way to input defaults, right now you need to map every single label manually.
-          // here's a discussion for defaults and the use of the alpha build
-          // https://github.com/neo4j-contrib/neovis.js/issues/216
+          // FIXME: #1 find a way to input defaults, right now you need to map every single label manually.
           Person: {
             caption: 'name',
           },
