@@ -10,4 +10,4 @@ Thanks to [@rthennan](https://github.com/rthennan) for answering in the [neovis 
 
 [See the original repository for the full documentation](https://github.com/neo4j-contrib/neovis.js)
 
-![](img/example-viz.png)
+![](example-viz.png)
