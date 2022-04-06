@@ -1,6 +1,6 @@
 # neovis.js with Neo4J Aura ready to use example
 
-Get a graph from your Neo4J data the easy way.
+Get a graph from your Neo4J data the easy way. See [working example](https://neovis.vercel.app/).
 
 Edit the `server_url` and `server_password` in `index.html`, get your credentials from https://console.neo4j.io/.
 
